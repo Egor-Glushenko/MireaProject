@@ -2,23 +2,48 @@
 <html lang="ru"> 
 <head> 
     <meta charset="UTF-8"> 
-    <!-- Важная мета-информация для корректного отображения на мобильных устройствах --> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Проект для ммирэа</title> 
-    <!-- Подключение фавиконки --> 
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon"> 
+    <title>DevToolsHub</title> 
+    <meta name="description" content="База данных инструментов для разработчиков (библиотеки, фреймворки, API)"> 
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> 
 </head> 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RY06WW7XMH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RY06WW7XMH');
-</script>
 <body> 
-    <h1>Сайт в разработке</h1> 
-    <p>Ждите!</p> 
+    <!-- Шапка сайта --> 
+    <header> 
+        <a href="/">DevToolsHub - каталог IT-инструментов</a> 
+        <!-- Главное меню навигации --> 
+        <nav> 
+            <ul> 
+                <li><a href="index.html">Главная</a></li> 
+                <li><a href="about.html">О нас</a></li> 
+                <li><a href="contacts.html">Контакты</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+    <!-- Уникальное основное содержимое страницы --> 
+    <main>
+        <h1>Разработчики и студенты добро пожаловать!</h1> 
+        <!-- Секция 1 с якорем --> 
+        <section id="services"> 
+            <h2>Выбор инструментов</h2> 
+            <p>Здесь вы можете выбрать фреймворки, API и т.д. и узнать о них больше</p> 
+            <a href="#contacts">Связаться с нами</a> <!-- Якорная ссылка внутри страницы --> 
+        </section> 
+        <!-- Секция 2 с якорем --> 
+        <section id="devtools"> 
+            <h2>Выбор инструментов</h2> 
+            <p>скоро</p> 
+        </section> 
+        <!-- Секция 3 с якорем --> 
+        <section id="contacts"> 
+            <h2>Контактная информация</h2> 
+            <p>Наши контакты: samsung20152637@gmail.com</p> 
+    </main> 
+            <a href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу --> 
+        </section> 
+    <!-- Подвал сайта --> 
+    <footer> 
+        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p> 
+    </footer> 
 </body> 
 </html> 
