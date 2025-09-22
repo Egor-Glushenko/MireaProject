@@ -21,19 +21,33 @@
   gtag('config', 'G-RY06WW7XMH');
 </script>
 <body> 
-    <header> 
-        <!-- Шапка сайта --> 
-    <header> 
-        <a href="/">DevToolsHub - каталог IT-инструментов</a> 
+    <header  class="site-header"> 
+        <!-- Шапка сайта -->  
+        <a class="site-header__brand" href="/">DevToolsHub - каталог IT-инструментов</a> 
         <!-- Главное меню навигации --> 
-        <nav> 
-            <ul> 
-                <li><a href="index.html">Главная</a></li> 
-                <li><a href="about.html">О нас</a></li> 
-                <li><a href="contacts.html">Контакты</a></li> 
+        <nav class="site-nav" aria-label="Основная навигация"> 
+            <ul class="site-nav__list"> 
+                <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li> 
+                <li class="site-nav__item"><a class="site-nav__link" href="about.html">О нас</a></li> 
+                <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li> 
             </ul> 
         </nav> 
-    </header> 
+        <button class="theme-toggle" type="button" aria-pressed="false">Тема</button> 
+            <script defer> 
+                const KEY='theme', btn=document.querySelector('.theme-toggle'); 
+                const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches; 
+                // Автовыбор: системная тема или сохранённый выбор пользователя 
+                if(localStorage.getItem(KEY)==='dark' || (!localStorage.getItem(KEY) && prefersDark)){ 
+                    document.body.classList.add('theme-dark'); 
+                    btn?.setAttribute('aria-pressed','true'); 
+                    } 
+                // Переключение по кнопке с сохранением в localStorage 
+                btn?.addEventListener('click', ()=>{ 
+                    const isDark=document.body.classList.toggle('theme-dark'); 
+                    btn.setAttribute('aria-pressed', String(isDark)); 
+                    localStorage.setItem(KEY, isDark ? 'dark' : 'light'); 
+                }); 
+            </script> 
     </header> 
     <main>
         <!-- Простые "хлебные крошки" --> 
